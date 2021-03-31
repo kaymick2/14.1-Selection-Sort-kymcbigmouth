@@ -14,15 +14,14 @@ class Main {
         if (a[i] < a[iMin]) {
           iMin = i;
           System.out.println("Progress: " + Arrays.toString(a));
-
         }
+        }//you need another close } here, must close this loop before the if
         if (iMin != j) {
           int tempVar = a[iMin];
-          a[i] = a[iMin];
-          tempVar = a[i];
+          a[iMin]=a[j];//this i needs to j
+          a[j]=tempVar;//this line is backwards
         }
       }
-    }
     System.out.println("the sorted array is:" + Arrays.toString(a));
+    }
   }
-}
