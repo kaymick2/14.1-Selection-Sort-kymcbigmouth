@@ -13,13 +13,16 @@ class Main {
       for (int i = j + 1; i < a.length; i++) {
         if (a[i] < a[iMin]) {
           iMin = i;
+          System.out.println("Progress: " + Arrays.toString(a));
+
+        }
+        if (iMin != j) {
+          int tempVar = a[iMin];
+          a[i] = a[iMin];
+          tempVar = a[i];
         }
       }
-      if (iMin !=j){
-        int tempVar=a[iMin];
-        if 
-      }
     }
-
+    System.out.println("the sorted array is:" + Arrays.toString(a));
   }
 }
